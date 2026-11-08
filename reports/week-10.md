@@ -10,9 +10,13 @@
 
 ## Important Commits
 
-- Commit hash: I will add it after my first push to GitHub.
-- Description: finished `reports/proposal.md` and `reports/week-10.md`.
-- Link: I will add the link to this commit in my fork.
+- Commit hash: fb38303
+- Description: added the completed project proposal (reports/proposal.md).
+- Link:https://github.com/adiateraly/ai-agents-final-adiateraly/commit/fb38303dbab262b04904e22f65006ff4830e7445
+
+- Commit hash: 698061b
+- Description: added the week 10 progress report (reports/week-10.md).
+- Link: https://github.com/adiateraly/ai-agents-final-adiateraly/commit/698061b38a5c5bb7ffd7a5be25eb6231446e290d
 
 ## Current Functionality
 
