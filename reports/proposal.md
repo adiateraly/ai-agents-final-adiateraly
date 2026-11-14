@@ -1,8 +1,8 @@
-# Project Proposal — Semester Week 10
+# Project Proposal
 
 ## Project Title
 
-Academic Planner Agent — a safe AI agent that finds course deadlines and makes a study plan.
+Academic Planner Agent - a safe AI agent that finds course deadlines and makes a study plan.
 
 ## Problem Description
 
