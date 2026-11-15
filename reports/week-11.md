@@ -12,9 +12,13 @@
 
 ## Important Commits
 
-- Commit hash: I will add it after I push to GitHub.
-- Description: model client, first working request, tests and setup guide.
-- Link: I will add the link to the commit in my fork.
+- Commit hash: a07eebb
+- Description: model client, first working request and tests.
+- Link: https://github.com/ardakshalkar/css4007-ai-agents-final/commit/a07eebb475af1f48c554134ee9848803b0c3588f
+
+- Commit hash: b39da6a
+- Description: final project files, setup guide and week 11 report.
+- Link: https://github.com/ardakshalkar/css4007-ai-agents-final/commit/b39da6acf0dbe6395e4c0408bf20a2a1013c6143
 
 ## Current Functionality
 
