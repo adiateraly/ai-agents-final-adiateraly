@@ -1,4 +1,4 @@
-# Project Proposal
+# Project Proposal - Semester Week 10
 
 ## Project Title
 
@@ -18,7 +18,7 @@ University students who want fast answers about their courses and a simple study
 
 ## Selected Difficulty
 
-A — Advanced (an autonomous agent that completes goals in many steps).
+A - Advanced (an autonomous agent that completes goals in many steps).
 
 Change note: in week 10 I planned level C with a possible move to level A. On 14 November 2026 (week 11) I decided to build level A. The topic and the architecture stay the same. Level A adds many steps, memory of the task (state), a plan, limits, safety rules (guardrails) and a research paper presentation.
 
@@ -177,7 +177,7 @@ The agent stops when the goal is done, when the goal cannot be done, when a limi
 
 I will check the system with automatic tests (`python -m unittest`). The tests use a fake AI model and fake data. I will also try the real model by hand and save one complete trace.
 
-Planned tests (at least 12):
+Planned tests:
 
 1. A course question makes the agent call `get_course_info` with the right argument.
 2. The final answer has the real value from the tool.
@@ -188,24 +188,24 @@ Planned tests (at least 12):
 7. An API error is handled with a clear message.
 8. Every tool call is saved in the trace with name, arguments and result.
 9. Multi-step goal: the courses are found first, then the deadlines, and the plan has all dates in order.
-10. Guardrail test — prompt injection: a note with a bad instruction does not cause any forbidden action.
-11. Guardrail test — repeated tool failure: the agent retries only `MAX_RETRIES` times and then stops with a clear reason.
-12. Guardrail test — unauthorized or unapproved action: a forbidden tool is denied, and saving a file without approval does not happen.
-13. Guardrail test — execution limit: the agent stops when `MAX_STEPS` or `MAX_TOOL_CALLS` is reached.
+10. Guardrail test - prompt injection: a note with a bad instruction does not cause any forbidden action.
+11. Guardrail test - repeated tool failure: the agent retries only `MAX_RETRIES` times and then stops with a clear reason.
+12. Guardrail test - unauthorized or unapproved action: a forbidden tool is denied, and saving a file without approval does not happen.
+13. Guardrail test - execution limit: the agent stops when `MAX_STEPS` or `MAX_TOOL_CALLS` is reached.
 14. `verify_result` marks a plan with a missing deadline as "partly completed".
 
 Success criteria: all tests pass, answers match the data, the agent never gives a value that a tool did not return, and every run ends with a clear stop reason.
 
 ## Weekly Milestones
 
-- Week 10 (2–8 Nov): fork the repository, choose topic, write the proposal and the week-10 report.
-- Week 11 (9–15 Nov): prepare the environment and the `.env` file, write the model client, make the first working request, write a short README. Decide level A and write this decision in the documents.
-- Week 12 (16–22 Nov): add fake data and the data functions, check inputs and outputs, write the first tests. Start to think about the research paper.
-- Week 13 (23–29 Nov): give the five tools to the AI model, let it choose tools, run real tool calls, write the permission policy (allowed tools, read-only, approval).
-- Week 14 (30 Nov–6 Dec): multi-step loop with state, plan, change of plan after an error, stop rules. Submit the research paper in `reports/paper-selection.md`.
-- Week 15 (7–13 Dec): guardrails: limits, approval, prompt-injection defense, retry rules, trace, verify_result. Write the four guardrail tests and reach 12 tests.
-- Week 16 (14–20 Dec): run all tests, save the results, fix problems, update the documents, prepare the paper presentation.
-- Week 17 (21–22 Dec): final README, final commit hash, full autonomous demonstration, paper presentation and defense.
+- Week 10 (2-8 Nov): fork the repository, choose topic, write the proposal and the week-10 report.
+- Week 11 (9-15 Nov): prepare the environment and the `.env` file, write the model client, make the first working request, write a short README. Decide level A and write this decision in the documents.
+- Week 12 (16-22 Nov): add fake data and the data functions, check inputs and outputs, write the first tests. Start to think about the research paper.
+- Week 13 (23-29 Nov): give the five tools to the AI model, let it choose tools, run real tool calls, write the permission policy (allowed tools, read-only, approval).
+- Week 14 (30 Nov-6 Dec): multi-step loop with state, plan, change of plan after an error, stop rules. Submit the research paper in `reports/paper-selection.md`.
+- Week 15 (7-13 Dec): guardrails: limits, approval, prompt-injection defense, retry rules, trace, verify_result. Write the four guardrail tests and reach 12 tests.
+- Week 16 (14-20 Dec): run all tests, save the results, fix problems, update the documents, prepare the paper presentation.
+- Week 17 (21-22 Dec): final README, final commit hash, full autonomous demonstration, paper presentation and defense.
 
 ## Change Notes
 
