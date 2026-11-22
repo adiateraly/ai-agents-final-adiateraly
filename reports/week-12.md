@@ -12,13 +12,19 @@
 
 ## Important Commits
 
-- Commit hash: (write the hash of commit 1 here)
-- Description: fake data, tools and validation
-- Link: (paste the link of commit 1 here)
+## Important Commits
 
-- Commit hash: (write the hash of commit 2 here)
-- Description: structured output, new commands, tests and documents
-- Link: (paste the link of commit 2 here)
+- Commit hash: 4656c45
+- Description: fake data, four tools, validation and structured output.
+- Link: https://github.com/adiateraly/ai-agents-final-adiateraly/commit/4656c45
+
+- Commit hash: a5d1f01
+- Description: week 12 report, updated PROJECT.md and proposal.
+- Link: https://github.com/adiateraly/ai-agents-final-adiateraly/commit/a5d1f01
+
+- Commit hash: ba30078
+- Description: stop tracking Python cache files (cleanup).
+- Link: https://github.com/adiateraly/ai-agents-final-adiateraly/commit/ba30078
 
 ## Current Functionality
 
