@@ -20,7 +20,7 @@ University students who want fast answers about their courses and a simple study
 
 A - Advanced (an autonomous agent that completes goals in many steps).
 
-Change note: in week 10 I planned level C with a possible move to level A. On 14 November 2026 (week 11) I decided to build level A. The topic and the architecture stay the same. Level A adds many steps, memory of the task (state), a plan, limits, safety rules (guardrails) and a research paper presentation.
+Change note: in week 10 I planned level C with a possible move to level A. On 11 November 2026 (week 11) I decided to build level A. The topic and the architecture stay the same. Level A adds many steps, memory of the task (state), a plan, limits, safety rules (guardrails) and a research paper presentation.
 
 ## Expected Functionality
 
@@ -54,7 +54,7 @@ All functions are in Python. The data is in a local file with fake data.
 3. `get_course_deadlines(course_id)`
    - Purpose: give the deadlines of a course.
    - Input: `course_id`.
-   - Output: a list of dates like "2026-12-10", or an error if the course does not exist.
+   - Output: a list of deadlines. Each deadline has a date like "2026-12-10" and a short title. Or an error if the course does not exist.
    - Dependencies: mock data.
 4. `get_course_notes(course_id)`
    - Purpose: give the teacher's notes about a course. This text is untrusted data. It is used to test prompt injection.
@@ -106,7 +106,7 @@ All functions are in Python. The data is in a local file with fake data.
     - Input: the state and the plan.
     - Output: completed, partly completed, failed, or not verified.
     - Dependencies: state.
-14. `log_trace(entry)`
+14. `log_trace(event_type, **details)` (a method of the class `Trace`)
     - Purpose: save each action in the trace. No secret data.
     - Input: action, tool, arguments, result or error, state change.
     - Output: one line in the trace file.
@@ -177,7 +177,7 @@ The agent stops when the goal is done, when the goal cannot be done, when a limi
 
 I will check the system with automatic tests (`python -m unittest`). The tests use a fake AI model and fake data. I will also try the real model by hand and save one complete trace.
 
-Planned tests:
+Planned tests (at least 12):
 
 1. A course question makes the agent call `get_course_info` with the right argument.
 2. The final answer has the real value from the tool.
@@ -209,4 +209,5 @@ Success criteria: all tests pass, answers match the data, the agent never gives 
 
 ## Change Notes
 
-- 14 Nov 2026 (week 11): selected level changed from C to A. Reason: I want to learn how to build a safe autonomous agent. The topic, the data and the first tools are the same. New parts: state, plan, limits, guardrails, approval, trace, more tests and the research paper.
+- 11 Nov 2026 (week 11): selected level changed from C to A. Reason: I want to learn how to build a safe autonomous agent. The topic, the data and the first tools are the same. New parts: state, plan, limits, guardrails, approval, trace, more tests and the research paper.
+- Week 12: `get_course_deadlines` returns a date and a title for each deadline (not only the date), so the study plan can say what is due. `log_trace` is a method of the class `Trace`.

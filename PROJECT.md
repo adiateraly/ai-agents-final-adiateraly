@@ -1,13 +1,12 @@
 # Academic Planner Agent
 
-An AI helper for university students. It answers questions about courses and deadlines.
+An AI agent for university students. It answers questions about courses and deadlines and builds a study plan.
 Project for CSS 4007. Level A (autonomous agent).
 
-## What works now (week 11)
+## What works now (week 12)
 
-- The program sends a question to an LLM (OpenAI API) and prints the answer.
-- Errors are handled: missing key, wrong key, wrong model, no internet, bad API answer.
-- 8 automatic tests with a fake API.
+- The program sends a question to an LLM (OpenAI API) and prints the answer. Errors are handled (no key, wrong key, wrong model, no internet, bad answer).
+- Fake data and four read-only tools (student courses, course info, deadlines, notes). Arguments and results are checked. The LLM can return a checked JSON summary of a course.
 
 ## What you need
 
@@ -30,10 +29,10 @@ Project for CSS 4007. Level A (autonomous agent).
 ## Run
 
 ```text
-python main.py "Say hello in one short sentence."
+python main.py "Say hello in one short sentence."   # ask the LLM
+python main.py course AI101                          # LLM summary as checked JSON
+python main.py data S001                             # show the fake data (no key needed)
 ```
-
-You can also run `python main.py` and type your question when the program asks.
 
 ## Run the tests
 
@@ -41,18 +40,21 @@ You can also run `python main.py` and type your question when the program asks.
 python -m unittest -v
 ```
 
-The tests use a fake API. They need no key and no internet.
+The tests use a fake model and need no key and no internet.
 
 ## Files
 
 | File | What it does |
 |---|---|
-| `main.py` | Starts the program and prints the answer |
-| `src/model_client.py` | Sends the request to the LLM and handles errors |
-| `tests/test_model_client.py` | Automatic tests |
-| `.env.example` | Example settings (no secrets) |
-| `reports/` | Proposal and weekly reports |
+| `main.py` | Command line |
+| `src/model_client.py` | Sends requests to the LLM, handles API errors |
+| `src/data.py` | Fake data |
+| `src/tools.py` | The tools |
+| `src/validation.py` | Checks for tool arguments and results |
+| `src/structured.py` | Checked JSON from the LLM |
+| `tests/` | Automatic tests |
+| `reports/` | Proposal, weekly reports, final report |
 
 ## AI assistance
 
-An AI assistant (Claude) helped to write this code.
+An AI assistant (Claude) helped to write the code, the tests and the documents. I ran and tested the code, and I am responsible for understanding and explaining it.
