@@ -13,3 +13,5 @@ Thumbs.db
 .private/
 *.pem
 *.key
+   __pycache__/
+   *.pyc
